@@ -1,0 +1,96 @@
+@import url("https://fonts.cdnfonts.com/css/seymour-one");
+@import url("https://fonts.cdnfonts.com/css/helvetica-255");
+
+:root {
+    --red-linear-color: linear-gradient(to bottom, #ff4949, #a84b4b);
+    --bg-color: #212121;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    letter-spacing: -0.03em;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    background-color: var(--bg-black);
+    padding: 1em 3em;
+    gap: 30px;
+
+    & img {
+        width: 150px;
+    }
+
+    & nav > ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        list-style: none;
+        width: 25em;
+        padding: 0;
+        margin: 0;
+
+        & li {
+            margin: 1rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+
+            transition: all 0.3s ease;
+
+            &.selected-nav-item {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 1em;
+                width: 150px;
+                height: 100px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-image: url("./public/assets/nav-border.png");
+
+                & a {
+                    height: 13px;
+                }
+            }
+
+            & a {
+                text-decoration: none;
+                color: rgb(187, 187, 187);
+                font-size: medium;
+                font-family: "Baskerville";
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    & button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 3px;
+        padding: 0.4em 0.8em;
+        border: 1px solid #eabf6a;
+        background-color: #a84b4b;
+        text-align: center;
+        color: white;
+        font-family: "Baskerville";
+        text-transform: uppercase;
+        font-size: medium;
+        font-weight: 600;
+    }
+}
