@@ -27,7 +27,7 @@ header {
     align-content: center;
     justify-content: space-between;
     background-color: var(--bg-black);
-    padding: 1em 3em;
+    padding: 0em 3em;
     gap: 30px;
 
     & img {
@@ -43,9 +43,9 @@ header {
         width: 25em;
         padding: 0;
         margin: 0;
+        gap: 1em;
 
         & li {
-            margin: 1rem;
             font-size: 1.5rem;
             font-weight: 600;
             cursor: pointer;
@@ -92,5 +92,76 @@ header {
         text-transform: uppercase;
         font-size: medium;
         font-weight: 600;
+    }
+}
+
+.sans-font {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+    letter-spacing: -10px;
+}
+
+.display-font {
+    font-family: "Times New Roman", Times, serif;
+    letter-spacing: -20px;
+    font-weight: 300;
+}
+
+.video-mask {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    -webkit-user-drag: none;
+    user-select: none;
+
+    & video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: translate(-50%, -50%);
+    }
+
+    & h1 {
+        position: relative;
+        font-size: 25vw;
+        color: transparent;
+        -webkit-text-stroke: 0px white;
+        letter-spacing: -6%;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 75%;
+        z-index: 1;
+        background: url("./public/assets/DB-Video-Edit.mp4") no-repeat center
+            center;
+        background-size: cover;
+        -webkit-background-clip: text;
+        background-clip: text;
+
+        text-shadow: 0 0 0.5em rgba(124, 124, 124, 0.5);
+        -webkit-user-drag: none;
+        user-select: none;
+        font-variation-settings: "wdth" 50;
+
+        &::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            color: white;
+            mix-blend-mode: overlay;
+            z-index: -1;
+            -webkit-user-drag: none;
+            user-select: none;
+        }
     }
 }
