@@ -1,6 +1,11 @@
 @import url("https://fonts.cdnfonts.com/css/seymour-one");
 @import url("https://fonts.cdnfonts.com/css/helvetica-255");
 
+@font-face {
+    font-family: "Griffy";
+    src: url("./public/fonts/Griffy-Regular.ttf") format("truetype");
+}
+
 :root {
     --red-linear-color: linear-gradient(to bottom, #ff4949, #a84b4b);
     --bg-color: #212121;
@@ -19,6 +24,9 @@ html {
     margin: 0;
     padding: 0;
     background-color: #000;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
 }
 
 header {
@@ -95,73 +103,98 @@ header {
     }
 }
 
+main {
+    & .photos {
+        position: absolute;
+        width: clamp(150px, 30%, 350px);
+
+        &:nth-child(1) {
+            top: 10%;
+            z-index: 1;
+        }
+
+        &:nth-child(2) {
+            top: 60%;
+            z-index: 2;
+        }
+
+        &:nth-child(3) {
+            top: 50%;
+            right: 0%;
+            z-index: 2;
+        }
+    }
+
+    & > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-block: 5em;
+        gap: 3em;
+
+        & h6 {
+            color: white;
+            text-transform: uppercase;
+            width: 300px;
+            text-align: center;
+        }
+    }
+
+    & .video-mask {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        -webkit-user-drag: none;
+        user-select: none;
+
+        & video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: translate(-50%, -50%);
+        }
+
+        & h1 {
+            padding-inline: 1em;
+            position: relative;
+            font-size: clamp(10rem, 15vw + 5rem, 22.5vw);
+            /* color: white; */
+            color: transparent;
+            -webkit-text-stroke: 0px white;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 75%;
+            z-index: 1;
+            background: url("./public/assets/DB-Video-Edit.mp4") no-repeat
+                center center;
+            background-size: cover;
+            -webkit-background-clip: text;
+            background-clip: text;
+
+            text-shadow: 0 0 1.5em rgba(124, 124, 124, 0.5);
+            -webkit-user-drag: none;
+            user-select: none;
+            font-variation-settings: "wdth" 50;
+        }
+    }
+}
+
 .sans-font {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
         Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
         sans-serif;
-    letter-spacing: -10px;
+    letter-spacing: -6%;
 }
 
 .display-font {
-    font-family: "Times New Roman", Times, serif;
-    letter-spacing: -20px;
+    font-family: "Griffy", serif;
     font-weight: 300;
-}
-
-.video-mask {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    -webkit-user-drag: none;
-    user-select: none;
-
-    & video {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transform: translate(-50%, -50%);
-    }
-
-    & h1 {
-        position: relative;
-        font-size: 25vw;
-        color: transparent;
-        -webkit-text-stroke: 0px white;
-        letter-spacing: -6%;
-        text-transform: uppercase;
-        text-align: center;
-        line-height: 75%;
-        z-index: 1;
-        background: url("./public/assets/DB-Video-Edit.mp4") no-repeat center
-            center;
-        background-size: cover;
-        -webkit-background-clip: text;
-        background-clip: text;
-
-        text-shadow: 0 0 0.5em rgba(124, 124, 124, 0.5);
-        -webkit-user-drag: none;
-        user-select: none;
-        font-variation-settings: "wdth" 50;
-
-        &::before {
-            content: attr(data-text);
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            color: white;
-            mix-blend-mode: overlay;
-            z-index: -1;
-            -webkit-user-drag: none;
-            user-select: none;
-        }
-    }
+    letter-spacing: -3%;
 }
