@@ -165,15 +165,15 @@ main {
             padding-inline: 1em;
             position: relative;
             font-size: clamp(10rem, 15vw + 5rem, 22.5vw);
-            color: white;
-            /* color: transparent; */
+            /* color: white; */
+            color: transparent;
             -webkit-text-stroke: 0px white;
             text-transform: uppercase;
             text-align: center;
             line-height: 75%;
             z-index: 1;
-            /* background: url("./public/assets/DB-Video-Edit.mp4") no-repeat
-                center center; */
+            background: url("./public/assets/DB-Video-Edit.mp4") no-repeat
+                center center;
             background-size: cover;
             -webkit-background-clip: text;
             background-clip: text;
