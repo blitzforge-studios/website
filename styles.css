@@ -42,7 +42,7 @@ header {
         width: 150px;
     }
 
-    & nav>ul {
+    & nav > ul {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -125,7 +125,7 @@ main {
         }
     }
 
-    &>div {
+    & > div {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -165,20 +165,19 @@ main {
             padding-inline: 1em;
             position: relative;
             font-size: clamp(10rem, 15vw + 5rem, 22.5vw);
-            /* color: white; */
-            color: transparent;
+            color: white;
             -webkit-text-stroke: 0px white;
             text-transform: uppercase;
             text-align: center;
             line-height: 75%;
             z-index: 1;
+            /* color: transparent;
             background: url("./public/assets/DB-Video-Edit.mp4") no-repeat
-                center center;
+                center center; */
             background-size: cover;
             -webkit-background-clip: text;
             background-clip: text;
 
-            text-shadow: 0 0 1.5em rgba(124, 124, 124, 0.5);
             -webkit-user-drag: none;
             user-select: none;
             font-variation-settings: "wdth" 50;
@@ -187,7 +186,6 @@ main {
 }
 
 section {
-
     &.tags {
         margin-top: 10em;
         display: flex;
@@ -232,8 +230,6 @@ section {
                 width: 40%;
             }
         }
-
-
     }
 }
 
