@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0" />
+        <title>Dungeon Blitzy</title>
+        <link
+            rel="stylesheet"
+            href="../styles/game.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="../scripts/fade-transition.js"></script>
+        <script src="../scripts/page-transitions.js"></script>
+    </head>
+
+    <body>
+        <div class="page-transition-overlay"></div>
+
+        <header>
+            <img
+                src="../public/assets/game/logo.webp"
+                alt="logos" />
+            <nav>
+                <ul>
+                    <li class="selected-nav-item">
+                        <a>game</a>
+                    </li>
+                    <li><a href="../index.html">BF Studios</a></li>
+                </ul>
+            </nav>
+            <button
+                onclick="window.open('https://blitzforge-studios.github.io/demo/', '_blank')">
+                launch tutorial
+            </button>
+        </header>
+        <main>
+            <img
+                src="../public/assets/game/rogue.png"
+                alt="Rogues"
+                class="photos"
+                loading="lazy" />
+            <img
+                src="../public/assets/game/paladin.png"
+                alt="Paladins"
+                class="photos"
+                loading="lazy" />
+            <img
+                src="../public/assets/game/mage.png"
+                alt="Mages"
+                class="photos"
+                loading="lazy" />
+
+            <div>
+                <div class="video-mask">
+                    <h1>
+                        <span class="sans-font">Dungeon</span>
+                        <br />
+                        <span class="display-font">Blitz</span>
+                    </h1>
+                </div>
+                <h6>
+                    A free-to-play, side-scrolling brawler with light RPG and
+                    MMO Game!
+                </h6>
+            </div>
+        </main>
+    </body>
+</html>
