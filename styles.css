@@ -221,9 +221,12 @@ h1 {
     z-index: 1;
 }
 
-main > p {
-    position: relative;
-    z-index: 1;
+main {
+    overflow-y: hidden;
+    & > p {
+        position: relative;
+        z-index: 1;
+    }
 }
 
 .subtitle {
@@ -1218,7 +1221,7 @@ footer {
     }
 
     .contributor-info {
-        display: none; 
+        display: none;
     }
 }
 
